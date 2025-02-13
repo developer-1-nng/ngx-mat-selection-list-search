@@ -1,7 +1,7 @@
 {
   "name": "ng-workspace",
   "description": "Angular workspace to hold multiple angular projects",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
