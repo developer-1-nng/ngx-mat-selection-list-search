@@ -1,4 +1,14 @@
 # NgxMatSelectionListSearch
+
+
+[![npm version](https://img.shields.io/npm/v/ngx-mat-selection-list-search.svg?style=flat-square)](https://www.npmjs.com/package/ngx-mat-selection-list-search)
+[![npm downloads total](https://img.shields.io/npm/dt/ngx-mat-selection-list-search.svg?style=flat-square)](https://www.npmjs.com/package/ngx-mat-selection-list-search)
+[![npm downloads monthly](https://img.shields.io/npm/dm/ngx-mat-selection-list-search.svg?style=flat-square)](https://www.npmjs.com/package/ngx-mat-selection-list-search)
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/248aQeLEPFQXwru3C86Uxx/JFF4seMyjHwx2b3stDoqex/tree/master.svg?style=svg&circle-token=CCIPRJ_69mfHnz4u2stg4DhGQGvFk_f518a45b0044cd82c269eda9c9ad8dbcccbae3c9)](https://dl.circleci.com/status-badge/redirect/circleci/248aQeLEPFQXwru3C86Uxx/JFF4seMyjHwx2b3stDoqex/tree/master)
+
+
+
+
 <img src="src/assets/demo_final.gif" alt="Demo" width="100%"/>
 
 ## 💡 What does it do?
@@ -127,6 +137,12 @@ Use ``ngxMatSelectionListNoRecordsFound`` to pass custom template for no records
 
 ## Compatibility
 
+#### Version [`2.0.0`](https://github.com/developer-1-nng/ngx-mat-selection-list-search/tree/v2.0.0)
+* `@angular/core`: `^17.0.0`
+* `@angular/material`: `^17.0.0` with `MatListModule` (`@angular/material/list`)
+
+
+#### Version [`1.0.2`](https://github.com/developer-1-nng/ngx-mat-selection-list-search/tree/v1.0.2)
 * `@angular/core`: `^16.0.0`
 * `@angular/material`: `^16.0.0` with `MatListModule` (`@angular/material/list`)
 
