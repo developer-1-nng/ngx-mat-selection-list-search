@@ -64,4 +64,6 @@ workflows:
             - test
           filters:
             branches:
-              only: master
+              only: 
+                - master
+                - v.1.x.x
