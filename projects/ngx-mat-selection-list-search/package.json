@@ -1,0 +1,36 @@
+{
+  "name": "ngx-mat-selection-list-search",
+  "license": "MIT",
+  "description": "An Angular component that adds a built-in search/filter input field to the MatSelectionList component of the Angular Material library.",
+  "version": "1.0.2",
+  "peerDependencies": {
+    "@angular/common": "^16.2.0",
+    "@angular/core": "^16.2.0",
+    "@angular/material": "^16.2.4"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "keywords": [
+    "angular",
+    "material",
+    "search",
+    "filter",
+    "list",
+    "selection-list",
+    "mat-selection-list"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/developer-1-nng/ngx-mat-selection-list-search.git"
+  },
+  "bugs": {
+    "url": "https://github.com/developer-1-nng/ngx-mat-selection-list-search/issues"
+  },
+  "homepage": "https://github.com/developer-1-nng/ngx-mat-selection-list-search/tree/main/projects/ngx-mat-selection-list-search",
+  "author": {
+    "name": "developer-1-nng",
+    "email": "developer.1.nng@gmail.com"
+  }
+}

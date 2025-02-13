@@ -1,0 +1,14 @@
+<mat-card>
+  <h3>Custom No Records Found UI</h3>
+  <hr>
+  <mat-selection-list>
+      <ngx-mat-selection-list-search [showLoader]="true">
+        <span ngxMatSelectionListNoRecordsFound>
+         <div class="custom-no-records-found"></div>
+        </span>
+      </ngx-mat-selection-list-search>
+      <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+        {{shoe}}
+      </mat-list-option>
+  </mat-selection-list>
+</mat-card>

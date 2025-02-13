@@ -1,0 +1,17 @@
+<mat-card>
+  <h3>Search Field Appearance</h3>
+  <hr>
+  <div class="customization-field">
+      <mat-radio-group aria-label="Select an appearance" [(ngModel)]="appearance" #appearanceRadio>
+          <mat-radio-button value="fill">Fill</mat-radio-button>
+          <mat-radio-button value="outline">Outline</mat-radio-button>
+        </mat-radio-group>
+  </div>
+  <mat-selection-list>
+      <ngx-mat-selection-list-search [fieldAppearance]="appearance">
+      </ngx-mat-selection-list-search>
+      <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+        {{shoe}}
+      </mat-list-option>
+  </mat-selection-list>
+</mat-card>

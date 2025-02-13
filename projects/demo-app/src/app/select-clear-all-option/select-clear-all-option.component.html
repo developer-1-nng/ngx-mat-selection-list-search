@@ -1,0 +1,17 @@
+<mat-card>
+  <h3>Select All & Clear Option Actions</h3>
+
+  <div class="customization-field">
+    <mat-checkbox #selectAllCheckBox [checked]="true">Select All</mat-checkbox>
+    <mat-checkbox #clearAllCheckBox [checked]="true">Clear</mat-checkbox>
+  </div>
+  <hr>
+  <mat-selection-list>
+    <ngx-mat-selection-list-search [selectAllAction]="selectAllCheckBox.checked"
+      [clearAllAction]="clearAllCheckBox.checked">
+    </ngx-mat-selection-list-search>
+    <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+      {{shoe}}
+    </mat-list-option>
+  </mat-selection-list>
+</mat-card>

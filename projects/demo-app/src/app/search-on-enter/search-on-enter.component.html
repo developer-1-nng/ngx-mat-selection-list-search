@@ -1,0 +1,11 @@
+<mat-card>
+    <h3>Search on Enter</h3>
+    <hr>
+    <mat-selection-list>
+        <ngx-mat-selection-list-search [searchOnEnter]="true">
+        </ngx-mat-selection-list-search>
+        <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+          {{shoe}}
+        </mat-list-option>
+    </mat-selection-list>
+</mat-card>

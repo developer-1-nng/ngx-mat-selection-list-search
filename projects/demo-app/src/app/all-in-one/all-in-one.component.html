@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-selection-list>
+    <ngx-mat-selection-list-search [showLoader]="true" [selectAllAction]="true" [clearAllAction]="true">
+    </ngx-mat-selection-list-search>
+    <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+      {{shoe}}
+    </mat-list-option>
+</mat-selection-list>
+</mat-card>

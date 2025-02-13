@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@include mat.core(); // Add this line to include core styles
+
+.custom-no-records-found {
+    background-image: url('../src/assets/No_Results_Found.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 35vh;
+}
+
+.customization-field{
+    display: flex;
+    align-items: center;
+    margin:1%;
+    gap:10px;
+}
+
+.width-30{
+    width: 30%;
+}
+
+mat-selection-list{
+    min-height: 30vh;
+}
+mat-card{
+    margin: 1%;
+    padding: 1%;
+}

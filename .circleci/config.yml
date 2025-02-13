@@ -1,0 +1,67 @@
+version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.5.0
+
+jobs:
+  install-dependencies:
+    docker:
+      - image: cimg/node:18.20.2-browsers
+
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package-lock.json" }}
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - save_cache:
+          paths:
+            - ~/.npm
+            - node_modules
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+
+  test:
+    docker:
+      - image: cimg/node:18.20.2-browsers
+    steps:
+      - browser-tools/install-chrome
+      - browser-tools/install-chromedriver
+      - checkout
+      - restore_cache:
+          keys:
+           - v1-dependencies-{{ checksum "package-lock.json" }}
+      - run:
+          name: Run Tests
+          command: CHROME_BIN=/usr/bin/google-chrome npm run test-lib
+      - store_artifacts:
+          path: coverage
+          destination: coverage
+
+  build:
+    docker:
+      - image: cimg/node:18.20.2-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package-lock.json" }}
+      - run:
+          name: Build Library
+          command: npm run build-lib
+
+
+workflows:
+  version: 2
+  library-ci:
+    jobs:
+      - install-dependencies
+      - test:
+          requires:
+            - install-dependencies
+      - build:
+          requires:
+            - test
+          filters:
+            branches:
+              only: main

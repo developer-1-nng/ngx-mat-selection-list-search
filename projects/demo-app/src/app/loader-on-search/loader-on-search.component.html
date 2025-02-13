@@ -1,0 +1,21 @@
+<mat-card>
+    
+    <h3>Loader and Debounce Time</h3>
+    <hr>
+    <div class="customization-field">
+        <mat-form-field subscriptSizing="dynamic" class="width-30">
+            <mat-label>Debounce Time</mat-label>
+            <input type="number" [(ngModel)]="debounceTime" placeholder="Debounce Time (ms)" matInput>
+            <span matTextSuffix>ms</span>
+        </mat-form-field>
+        <mat-slide-toggle [checked]="true" color="primary" #loaderToggle>Show loader</mat-slide-toggle>
+    </div>
+    
+    <mat-selection-list>
+        <ngx-mat-selection-list-search [debounceTime]="debounceTime" [showLoader]="loaderToggle.checked">
+        </ngx-mat-selection-list-search>
+        <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+          {{shoe}}
+        </mat-list-option>
+    </mat-selection-list>
+</mat-card>

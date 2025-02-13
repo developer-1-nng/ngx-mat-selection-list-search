@@ -1,0 +1,17 @@
+<mat-card>
+    <h3>Add Dynamic Placeholder</h3>
+    <div class="customization-field">
+        <mat-form-field subscriptSizing="dynamic" class="width-30">
+            <input [(ngModel)]="placeholder" placeholder="Add Placeholder" matInput>
+        </mat-form-field>
+        <button mat-raised-button (click)="CustomPlaceHolder = placeholder" color="primary">Update Placeholder</button>
+    </div>
+    
+    <mat-selection-list [multiple]="false">
+        <ngx-mat-selection-list-search [placeholder]="CustomPlaceHolder">
+        </ngx-mat-selection-list-search>
+        <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+          {{shoe}}
+        </mat-list-option>
+    </mat-selection-list>
+</mat-card>
