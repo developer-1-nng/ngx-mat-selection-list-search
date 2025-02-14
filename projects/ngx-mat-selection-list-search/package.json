@@ -2,11 +2,11 @@
   "name": "ngx-mat-selection-list-search",
   "license": "MIT",
   "description": "An Angular component that adds a built-in search/filter input field to the MatSelectionList component of the Angular Material library.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "peerDependencies": {
     "@angular/core": "^17.0.0",
     "@angular/common": "^17.0.0",
-    "@angular/material": "^16.2.4"
+    "@angular/material": "^17.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
